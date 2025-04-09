@@ -22,7 +22,7 @@
                 <h2 class="font-bold text-gray-700 text-lg">Get your Gaming Gear!</h2>
                 <img src="img/gaming_gear.jpg" alt="" class="w-60 h-72 object-contain mx-auto mt-2">
                 <div class="flex justify-around items-center">
-                <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
+                <a href="?page=gaming_products" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
                 <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Edit</a>
                 </div>
             </div>

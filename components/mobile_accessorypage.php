@@ -2,7 +2,7 @@
 require '../config.php'; // Ensure database connection
 
 // Fetch mobile accessories from the database
-$query = "SELECT * FROM category_tb"; // Adjust query if category filter is needed
+$query = "SELECT * FROM mobile_products_tb"; // Adjust query if category filter is needed
 $result = mysqli_query($conn, $query);
 ?>
     <?php require('partials/head.php')?>

@@ -1,7 +1,7 @@
 <?php
 require 'config.php'; 
 
-$query = "SELECT * FROM mobile_products_tb";
+$query = "SELECT * FROM gaming_products_tb";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -10,14 +10,14 @@ $result = mysqli_query($conn, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Products</title>
+    <title>Gaming Products</title>
     <script src="https://cdn.jsdelivr.net/npm/tailwindcss@4"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons.esm.js"></script>
 </head>
 <body>
 
     <div class="flex justify-end items-center p-4">
-        <a href="?page=add_products" class="text-green-700 font-semibold flex items-center active:bg-green-300">
+        <a href="?page=addgaming_products" class="text-green-700 font-semibold flex items-center active:bg-green-300">
             <ion-icon name="add-outline" class="text-green-700 cursor-pointer w-5 h-5"></ion-icon>CREATE
         </a>
     </div>
@@ -30,7 +30,7 @@ $result = mysqli_query($conn, $query);
                 <h2 class="text-lg font-bold mt-2"><?= $row['name']; ?></h2>
                 <p class="text-gray-600"><?= $row['description']; ?></p>
                 <p class="text-gray-600">$<?= $row['price']; ?></p>   
-                <a href="?page=edit_product&id=<?= $row['id']; ?>" class="text-green-700">Edit</a>
+                <a href="?page=editgaming_products&id=<?= $row['id']; ?>" class="text-green-700">Edit</a>
             </div>
         <?php endwhile; ?>
     </div>

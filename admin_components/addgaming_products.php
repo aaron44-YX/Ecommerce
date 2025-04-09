@@ -13,8 +13,8 @@ if(isset($_POST['save'])){
     $price = $_POST['price'];
 
     move_uploaded_file($imageTmpName, $imagePath);
-    $conn->query("INSERT INTO mobile_products_tb (name, image, description, quantity, price) VALUES ('$name', '$imageName', '$description', '$quantity', '$price')") or die($conn->error);
-    header("Location: ?page=mobile_products");
+    $conn->query("INSERT INTO gaming_products_tb (name, image, description, quantity, price) VALUES ('$name', '$imageName', '$description', '$quantity', '$price')") or die($conn->error);
+    header("Location: ?page=gaming_products");
 }
 
 ?>
