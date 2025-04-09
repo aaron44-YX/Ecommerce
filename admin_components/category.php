@@ -30,7 +30,7 @@
                 <h2 class="font-bold text-gray-700 text-lg">School Supplies</h2>
                 <img src="img/schoolsup.webp" alt="" class="w-60 h-72 object-contain mx-auto mt-2">
                 <div class="flex justify-around items-center">
-                <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
+                <a href="?page=school_products" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
                 <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Edit</a>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 <h2 class="font-bold text-gray-700 text-lg">Shop deals in Fashion</h2>
                 <img src="img/fashion.jpg" alt="" class="w-60 h-72 object-contain mx-auto mt-2">
                 <div class="flex justify-around items-center">
-                <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
+                <a href="?page=fashion_products" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
                 <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Edit</a>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                 <h2 class="font-bold text-gray-700 text-lg">Kitchen Appliances</h2>
                 <img src="img/kitchen_app.jpg" alt="" class="w-60 h-72 object-contain mx-auto mt-2">
                 <div class="flex justify-around items-center">
-                <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
+                <a href="?page=kitchen_products" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
                 <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Edit</a>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 <h2 class="font-bold text-gray-700 text-lg">Home Essentials</h2>
                 <img src="img/home_ess.jpg" alt="" class="w-60 h-72 object-contain mx-auto mt-2">
                 <div class="flex justify-around items-center">
-                <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
+                <a href="?page=home_products" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
                 <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Edit</a>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                 <h2 class="font-bold text-gray-700 text-lg">Branded Deals</h2>
                 <img src="img/branded_products.png" alt="" class="w-60 h-72 object-contain mx-auto mt-2">
                 <div class="flex justify-around items-center">
-                <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
+                <a href="?page=branded_products" class="text-green-600 text-sm hover:text-black cursor-pointer">Products</a>
                 <a href="#" class="text-green-600 text-sm hover:text-black cursor-pointer">Edit</a>
                 </div>
             </div>
