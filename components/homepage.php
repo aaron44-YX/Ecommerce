@@ -2,7 +2,7 @@
     <?php require('partials/nav.php')?>
 
     <main class="relative text-center text-white">
-        <div class="absolute inset-0 top-[-48px] bg-cover bg-center opacity-30" style="background-image: url('../img/vr.jpg');"></div>
+        <div class="absolute inset-0 top-[-48px] bg-cover bg-center opacity-30" style="background-image: url('./img/vr.jpg');"></div>
         <h1 class="relative mt-12 text-4xl font-bold max-w-lg mx-auto">Fast Shipping, Great Prices Find What You Love Today!</h1>
         <div class="relative flex flex-wrap justify-center gap-6 p-10">
             <div class="bg-white w-72 h-96 p-4 text-center transform transition-transform hover:scale-105 cursor-pointer" onclick="window.location.href='/ecommerce_project/components/mobile_accessorypage.php';">
