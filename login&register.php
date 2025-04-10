@@ -29,11 +29,11 @@ function isActiveForm($formName, $activeForm){
 </head>
 <body class="min-h-screen flex items-center justify-center bg-white text-gray-700 font-[Poppins,sans-serif] relative">
   <main class="w-full relative z-10">
-    <!-- Background Image -->
+    
     <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('img/ecomers_bg.avif'); z-index: -1;"></div>
 
     <div class="flex flex-col items-center justify-center min-h-screen px-4 py-10 sm:px-6 lg:px-8">
-      <!-- Login Form -->
+      
       <div role="form-box" class="<?= isActiveForm('login', $activeForm); ?> w-full max-w-md p-8 bg-white rounded-lg shadow-md mb-6" id="show_Login">
         <form action="login_register.php" method="post">
           <h1 class="text-2xl font-bold text-center mb-5">Login</h1>
@@ -50,7 +50,6 @@ function isActiveForm($formName, $activeForm){
         </div>
       </div>
 
-      <!-- Forgot Password -->
       <div role="form-box" class="hidden w-full max-w-md p-8 bg-white rounded-lg shadow-md mb-6" id="show_ForgotPassword">
         <form action="forgot_password.php" method="post">
           <h1 class="text-2xl font-bold text-center mb-5">Forgot Password</h1>
@@ -60,7 +59,6 @@ function isActiveForm($formName, $activeForm){
         </form>
       </div>
 
-      <!-- Register Form -->
       <div role="form-box" class="<?= isActiveForm('register', $activeForm); ?> w-full max-w-md p-8 bg-white rounded-lg shadow-md" id="show_Register">
         <form action="login_register.php" method="post">
           <h1 class="text-2xl font-bold text-center mb-5">Register</h1>
