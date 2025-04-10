@@ -1,7 +1,9 @@
 <header class="bg-white shadow-md">
   <nav class="flex flex-wrap items-center justify-between px-4 py-3 max-w-7xl mx-auto">
    
-    <h1 class="text-green-600 text-xl font-bold">Pearlas</h1>
+  <a href="/ecommerce_project/homepage.php">
+  <h1 class="text-green-600 text-xl font-bold cursor-pointer">Pearlas</h1>
+</a>
 
 
     <button class="lg:hidden text-green-600 focus:outline-none" onclick="toggleMenu()">
