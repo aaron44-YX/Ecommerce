@@ -26,6 +26,7 @@ function isActiveForm($formName, $activeForm){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body class="min-h-screen flex items-center justify-center bg-white text-gray-700 font-[Poppins,sans-serif] relative">
   <main class="w-full relative z-10">
@@ -36,6 +37,11 @@ function isActiveForm($formName, $activeForm){
       
       <div role="form-box" class="<?= isActiveForm('login', $activeForm); ?> w-full max-w-md p-8 bg-white rounded-lg shadow-md mb-6" id="show_Login">
         <form action="login_register.php" method="post">
+      <div class="flex">
+        <button type="button" class="flex justify-center items-center ml-auto" onclick="window.location.href='homepage.php';">
+        <ion-icon name="close-outline" class="text-green-700 text-2xl"></ion-icon>
+        </button>
+      </div>
           <h1 class="text-2xl font-bold text-center mb-5">Login</h1>
           <?= showError($errors['login']); ?>
           <input class="w-full p-3 mb-4 rounded bg-gray-300 focus:outline-none" type="email" name="email" placeholder="Email" required>
@@ -52,6 +58,11 @@ function isActiveForm($formName, $activeForm){
 
       <div role="form-box" class="hidden w-full max-w-md p-8 bg-white rounded-lg shadow-md mb-6" id="show_ForgotPassword">
         <form action="forgot_password.php" method="post">
+      <div class="flex">
+        <button type="button" class="flex justify-center items-center ml-auto" onclick="redirectToLogin()">
+        <ion-icon name="close-outline" class="text-green-700 text-2xl"></ion-icon>
+        </button>
+      </div>
           <h1 class="text-2xl font-bold text-center mb-5">Forgot Password</h1>
           <p class="text-center mb-4">Enter your email to receive a password reset link.</p>
           <input class="w-full p-3 mb-4 rounded bg-gray-300 focus:outline-none" type="email" name="email" placeholder="Email" required>
@@ -61,6 +72,11 @@ function isActiveForm($formName, $activeForm){
 
       <div role="form-box" class="<?= isActiveForm('register', $activeForm); ?> w-full max-w-md p-8 bg-white rounded-lg shadow-md" id="show_Register">
         <form action="login_register.php" method="post">
+      <div class="flex">
+        <button type="button" class="flex justify-center items-center ml-auto" onclick="redirectToLogin()">
+        <ion-icon name="close-outline" class="text-green-700 text-2xl"></ion-icon>
+        </button>
+      </div>
           <h1 class="text-2xl font-bold text-center mb-5">Register</h1>
           <?= showError($errors['register']); ?>
           <input class="w-full p-3 mb-4 rounded bg-gray-300 focus:outline-none" type="text" name="fullname" placeholder="Full Name">

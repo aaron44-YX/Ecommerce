@@ -1,5 +1,5 @@
 <?php 
 
-    require('components/homepage.php')
+    require('homepage.php')
 
 ?>

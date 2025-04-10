@@ -1,5 +1,5 @@
-  <?php require('partials/head.php')?>
-    <?php require('partials/nav.php')?>
+  <?php require('./components/partials/head.php')?>
+    <?php require('./components/partials/nav.php')?>
 
     <main class="relative text-center text-white">
         <div class="absolute inset-0 top-[-48px] bg-cover bg-center opacity-30" style="background-image: url('./img/vr.jpg');"></div>
@@ -47,4 +47,4 @@
             </div>
         </div>
     </main>
-    <?php require('partials/footer.php')?>
+    <?php require('./components/partials/footer.php')?>
