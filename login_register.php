@@ -30,6 +30,7 @@ if(isset($_POST['login'])){
     if($result->num_rows > 0){
         $user = $result->fetch_assoc();
         if(password_verify($password, $user['password'])){
+            $_SESSION['user_id'] = $user['id'];
             $_SESSION['fullname'] = $user['fullname'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['is_admin'] = $user['is_admin'];
@@ -37,7 +38,7 @@ if(isset($_POST['login'])){
             if ($user['is_admin'] == 1) {
                 header("Location: adminpage.php"); 
             } else {
-                header("Location: ./components/homepage.php"); 
+                header("Location: homepage.php"); 
             }
             exit();
         }

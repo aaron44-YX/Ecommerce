@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header class="bg-white shadow-md">
   <nav class="flex flex-wrap items-center justify-between px-4 py-3 max-w-7xl mx-auto">
    
@@ -21,9 +24,15 @@
       
       <div class="flex items-center justify-center space-x-4 w-full lg:w-auto">
         <ion-icon name="cart" class="w-6 h-6 text-green-600 cursor-pointer"></ion-icon>
-        <button id="user_login" onclick="redirectToLogin()" class="cursor-pointer px-4 py-2 rounded-full bg-green-600 text-white font-bold hover:bg-green-500">
-          Login
-        </button>
+        <?php if (isset($_SESSION['fullname'])): ?>
+          <a href="user_profile.php" class="cursor-pointer text-green-700 font-bold hover:text-green-500">
+            <?= htmlspecialchars($_SESSION['fullname']); ?>
+          </a>
+        <?php else: ?>
+          <a href="login&register.php" class="cursor-pointer px-4 py-2 rounded-full bg-green-600 text-white font-bold hover:bg-green-500">
+            Login
+          </a>
+        <?php endif; ?>
       </div>
     </div>
   </nav>
