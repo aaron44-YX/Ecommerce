@@ -15,12 +15,21 @@ if(isset($_POST['register'])){
         $_SESSION['active_form'] = 'register';
         header("Location: login&register.php");
         exit();
-    }else{
+    } else {
         $conn->query("INSERT INTO register_tb (fullname,email,contact,password) VALUES ('$fullname','$email','$contact','$password')");
+
+        $userId = $conn->insert_id;
+
+        $_SESSION['user_id'] = $userId;
+        $_SESSION['fullname'] = $fullname;
+        $_SESSION['email'] = $email;
+        $_SESSION['is_admin'] = 0;
+
+        header("Location: homepage.php");
+        exit();
     }
-    header("Location: ./components/homepage.php");
-    exit();
 }
+
 
 if(isset($_POST['login'])){
     $email = $_POST['email'];
