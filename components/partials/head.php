@@ -7,4 +7,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
-<body class="bg-gray-400 font-[Poppins, sans-serif]">
+<body class="bg-gray-400 font-[Poppins, sans-serif] min-h-screen flex flex-col">
