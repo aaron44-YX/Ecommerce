@@ -1,13 +1,20 @@
 <?php
-require '../config.php'; // Database connection
+require '../config.php'; 
 require 'partials/head.php';
 require 'partials/nav.php';
 
-if (isset($_GET['id'])) {
+$product = null;
+if (isset($_GET['id']) && isset($_GET['category'])) {
     $id = intval($_GET['id']);
-    $query = "SELECT * FROM mobile_products_tb WHERE id = $id";
-    $result = mysqli_query($conn, $query);
-    $product = mysqli_fetch_assoc($result);
+    $allowed_tables = ['mobile_products_tb', 'fashion_products_tb', 'gaming_products_tb', 'home_products_tb', 'school_products_tb', 'kitchen_products_tb', 'branded_products_tb']; 
+
+    $category = $_GET['category'];
+    
+    if (in_array($category, $allowed_tables)) {
+        $query = "SELECT * FROM $category WHERE id = $id";
+        $result = mysqli_query($conn, $query);
+        $product = mysqli_fetch_assoc($result);
+    }
 }
 ?>
 
