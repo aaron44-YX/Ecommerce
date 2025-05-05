@@ -16,12 +16,8 @@ session_start();
    
     <div id="nav-menu" class="w-full lg:w-auto lg:flex items-center justify-between space-y-4 lg:space-y-0 lg:space-x-6 mt-4 lg:mt-0 hidden lg:flex">
       
-      <div class="flex items-center justify-center space-x-2 w-full lg:w-auto">
-        <input type="search" placeholder="Search Pearlas" class="w-full lg:w-96 p-2 rounded bg-green-100 focus:outline-green-500">
-        <ion-icon name="search" class="text-green-600 cursor-pointer text-xl"></ion-icon>
-      </div>
+    <?php require __DIR__ . '/searchbar.php'; ?>
 
-      
       <div class="flex items-center justify-center space-x-4 w-full lg:w-auto">
         <ion-icon name="cart" class="w-6 h-6 text-green-600 cursor-pointer"></ion-icon>
         <?php if (isset($_SESSION['fullname'])): ?>
