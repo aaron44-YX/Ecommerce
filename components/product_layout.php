@@ -6,16 +6,28 @@ require 'partials/nav.php';
 $product = null;
 if (isset($_GET['id']) && isset($_GET['category'])) {
     $id = intval($_GET['id']);
-    $allowed_tables = ['mobile_products_tb', 'fashion_products_tb', 'gaming_products_tb', 'home_products_tb', 'school_products_tb', 'kitchen_products_tb', 'branded_products_tb']; 
+
+    // Map short category to full table name
+    $category_map = [
+        'branded' => 'branded_products_tb',
+        'fashion' => 'fashion_products_tb',
+        'gaming' => 'gaming_products_tb',
+        'home' => 'home_products_tb',
+        'school' => 'school_products_tb',
+        'kitchen' => 'kitchen_products_tb',
+        'mobile' => 'mobile_products_tb'
+    ];
 
     $category = $_GET['category'];
-    
-    if (in_array($category, $allowed_tables)) {
-        $query = "SELECT * FROM $category WHERE id = $id";
+
+    if (array_key_exists($category, $category_map)) {
+        $table = $category_map[$category];
+        $query = "SELECT * FROM $table WHERE id = $id";
         $result = mysqli_query($conn, $query);
         $product = mysqli_fetch_assoc($result);
     }
 }
+
 ?>
 
 <main class="flex-1 p-6">

@@ -40,12 +40,12 @@ $result = $stmt->get_result();
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <?php while ($row = $result->fetch_assoc()): ?>
-        <div class="bg-white p-4 rounded-lg shadow">
+        <a href="components/product_layout.php?category=<?= $row['category']; ?>&id=<?= $row['id']; ?>" class="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
           <img src="uploads/<?= $row['image'] ?>" alt="<?= htmlspecialchars($row['name']) ?>" class="w-full h-48 object-cover rounded">
           <h3 class="text-lg font-semibold mt-2"><?= htmlspecialchars($row['name']) ?></h3>
           <p class="text-green-600 font-bold">₱<?= $row['price'] ?></p>
           <p class="text-sm text-gray-500">Category: <?= ucfirst($row['category']) ?></p>
-        </div>
+      </a>
       <?php endwhile; ?>
     </div>
 
