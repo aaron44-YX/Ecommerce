@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once "session_start.php";
 require_once "config.php";
 
 $searchTerm = isset($_GET['search']) ? "%" . $_GET['search'] . "%" : "";
@@ -25,15 +25,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Search Results</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 font-sans">
-
+<?php require('./components/partials/head.php')?>
+<?php require('./components/partials/nav.php')?>
 
   <div class="container mx-auto px-4 py-6">
     <h2 class="text-2xl font-bold mb-4">Search Results for "<?= htmlspecialchars($_GET['search']) ?>"</h2>
@@ -54,5 +47,4 @@ $result = $stmt->get_result();
     <?php endif; ?>
   </div>
 
-</body>
-</html>
+  <?php require('./components/partials/footer.php')?>
