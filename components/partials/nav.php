@@ -1,5 +1,5 @@
 <?php
-require_once "session_start.php";
+require_once __DIR__ . '/../../session_start.php';
 ?>
 <header class="bg-white shadow-md">
   <nav class="flex flex-wrap items-center justify-between px-4 py-3 max-w-7xl mx-auto">

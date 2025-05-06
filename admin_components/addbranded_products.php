@@ -1,6 +1,6 @@
 <?php
 
-require_once "session_start.php";
+require_once __DIR__ . '/../session_start.php';
 require_once "config.php";
 
 if(isset($_POST['save'])){
