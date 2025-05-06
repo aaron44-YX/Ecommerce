@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once "session_start.php";
 
 // Preserve specific session values (like cart or preferences)
 $preserve = [];

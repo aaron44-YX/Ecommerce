@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+require_once "session_start.php";
 
 $errors = [
     'login' => $_SESSION['login_error'] ?? '',

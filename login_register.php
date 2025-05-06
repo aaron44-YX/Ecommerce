@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+require_once "session_start.php";
 require_once "config.php";
 
 if(isset($_POST['register'])){
