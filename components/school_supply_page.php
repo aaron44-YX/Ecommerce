@@ -17,7 +17,7 @@ $result = mysqli_query($conn, $query);
             <img src="../uploads/<?= $row['image']; ?>" alt="<?= $row['name']; ?>" class="w-full h-60 object-cover rounded">
             <h2 class="text-lg font-bold mt-2"><?= $row['name']; ?></h2>
             <p class="text-gray-600"><?= $row['description']; ?></p>
-            <p class="text-gray-600">₱<?= $row['price']; ?></p>
+            <p class="text-gray-600">$<?= $row['price']; ?></p>
         </a>    
         <?php endwhile; ?>
     </div>
