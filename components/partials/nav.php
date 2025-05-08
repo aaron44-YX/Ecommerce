@@ -19,7 +19,7 @@ require_once __DIR__ . '/../../session_start.php';
     <?php require __DIR__ . '/searchbar.php'; ?>
 
       <div class="flex items-center justify-center space-x-4 w-full lg:w-auto">
-        <ion-icon name="cart" class="w-6 h-6 text-green-600 cursor-pointer"></ion-icon>
+      <?php require __DIR__ . '/cart.php'; ?>
         <?php if (isset($_SESSION['fullname'])): ?>
           <a href="user_profile.php" class="cursor-pointer text-green-700 font-bold hover:text-green-500">
             <?= htmlspecialchars($_SESSION['fullname']); ?>
