@@ -42,7 +42,7 @@ if (isset($_GET['id']) && isset($_GET['category'])) {
                 <input type="number" id="quantity" name="quantity" value="1" min="1" class="border rounded px-2 py-1 w-20">
             </div>
             <div class="flex gap-4">
-                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Add to Cart</button>
+                <a href="../add_to_cart.php?product_id=1" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Add to Cart</a>
                 <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">Buy Now</button>
             </div>
         </div>
