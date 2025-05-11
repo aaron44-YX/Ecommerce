@@ -45,9 +45,9 @@ $cart = $_SESSION['cart'] ?? [];
                                 <input type="checkbox" class="product-check" name="selected_items[]" value="<?= $key ?>" data-subtotal="<?= $subtotal ?>">
                                 <?= htmlspecialchars($item['name']) ?>
                             </td>
-                            <td class="py-2">₱<?= number_format($item['price'], 2) ?></td>
+                            <td class="py-2">$<?= number_format($item['price'], 2) ?></td>
                             <td class="py-2"><?= $item['quantity'] ?></td>
-                            <td class="py-2">₱<?= number_format($subtotal, 2) ?></td>
+                            <td class="py-2">$<?= number_format($subtotal, 2) ?></td>
                             <td class="py-2">
                                 <a href="remove_from_cart.php?product_id=<?= $product_id ?>&category=<?= $category ?>" class="text-red-500 hover:underline">Remove</a>
                             </td>
@@ -58,7 +58,7 @@ $cart = $_SESSION['cart'] ?? [];
 
             <div class="flex justify-between items-center mt-6">
                 <div class="font-semibold text-lg">
-                    Selected Total: ₱<span id="selectedTotal">0.00</span>
+                    Selected Total: $<span id="selectedTotal">0.00</span>
                 </div>
                 <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg">
                     Checkout
