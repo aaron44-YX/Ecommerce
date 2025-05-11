@@ -38,3 +38,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// For Product Selection
+    const checkboxes = document.querySelectorAll('.product-check');
+    const selectAll = document.getElementById('selectAll');
+    const totalDisplay = document.getElementById('selectedTotal');
+
+    function updateTotal() {
+        let total = 0;
+        checkboxes.forEach(cb => {
+            if (cb.checked) {
+                total += parseFloat(cb.dataset.subtotal);
+            }
+        });
+        totalDisplay.textContent = total.toFixed(2);
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', updateTotal));
+    selectAll.addEventListener('change', () => {
+        checkboxes.forEach(cb => cb.checked = selectAll.checked);
+        updateTotal();
+    });
+
