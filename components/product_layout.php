@@ -36,7 +36,7 @@ if (isset($_GET['id']) && isset($_GET['category'])) {
             <img src="../uploads/<?= $product['image']; ?>" alt="<?= $product['name']; ?>" class="w-full h-96 object-cover rounded mb-6">
             <h1 class="text-3xl font-bold mb-2"><?= $product['name']; ?></h1>
             <p class="text-gray-700 text-lg mb-4"><?= $product['description']; ?></p>
-            <p class="text-2xl text-green-600 font-semibold mb-4">₱<?= number_format($product['price'], 2); ?></p>
+            <p class="text-2xl text-green-600 font-semibold mb-4">$<?= number_format($product['price'], 2); ?></p>
 
             <!-- Add to Cart Form -->
             <form action="../add_to_cart.php" method="get" class="mb-4">
