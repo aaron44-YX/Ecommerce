@@ -23,3 +23,11 @@ foreach ($preserve as $key => $value) {
 // Redirect to homepage
 header("Location: homepage.php");
 exit();
+
+// Clear all session data
+unset($_SESSION['user_id']);
+unset($_SESSION['cart']); // <-- this line is key
+session_destroy();
+
+header("Location: login.php");
+exit();
