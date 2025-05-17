@@ -60,3 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
         updateTotal();
     });
 
+// For Checkout
+    document.getElementById('cartForm').addEventListener('submit', function (e) {
+    const selected = document.querySelectorAll('.product-check:checked');
+    if (selected.length === 0) {
+        alert("Please select at least one product to checkout.");
+        e.preventDefault();
+    }
+});
