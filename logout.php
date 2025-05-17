@@ -1,33 +1,40 @@
 <?php
 require_once "session_start.php";
+require_once "config.php"; // DB connection
 
-// Preserve specific session values (like cart or preferences)
-$preserve = [];
-if (isset($_SESSION['cart'])) {
-    $preserve['cart'] = $_SESSION['cart'];
-}
-if (isset($_SESSION['preferences'])) {
-    $preserve['preferences'] = $_SESSION['preferences'];
+// Save cart to database before logout
+if (isset($_SESSION['user_id']) && !empty($_SESSION['cart'])) {
+    $user_id = $_SESSION['user_id'];
+    $cart = $_SESSION['cart'];
+
+    // Delete existing cart records for this user
+    $delete = $conn->prepare("DELETE FROM user_carts WHERE user_id = ?");
+    $delete->bind_param("i", $user_id);
+    $delete->execute();
+    $delete->close();
+
+    // Insert current cart items
+    $stmt = $conn->prepare("INSERT INTO user_carts (user_id, product_key, name, price, quantity, category) VALUES (?, ?, ?, ?, ?, ?)");
+
+    foreach ($cart as $key => $item) {
+        $stmt->bind_param(
+            "issdis",
+            $user_id,
+            $key,
+            $item['name'],
+            $item['price'],
+            $item['quantity'],
+            $item['category']
+        );
+        $stmt->execute();
+    }
+    $stmt->close();
 }
 
-// Clear all session variables
+// Now clear session
 session_unset();
 session_destroy();
 
-// Start a new session and restore preserved data
-session_start();
-foreach ($preserve as $key => $value) {
-    $_SESSION[$key] = $value;
-}
-
-// Redirect to homepage
-header("Location: homepage.php");
-exit();
-
-// Clear all session data
-unset($_SESSION['user_id']);
-unset($_SESSION['cart']); // <-- this line is key
-session_destroy();
-
-header("Location: login.php");
+// Redirect to login page
+header("Location: login&register.php");
 exit();
