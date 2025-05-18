@@ -48,7 +48,7 @@ if (isset($_GET['id']) && isset($_GET['category'])) {
 
                 <div class="flex gap-4">
                     <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Add to Cart</button>
-                    <button type="button" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">Buy Now</button>
+                    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">Buy Now</button>
                 </div>
             </form>
         </div>
